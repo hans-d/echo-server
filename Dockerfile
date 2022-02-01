@@ -18,7 +18,7 @@ RUN --mount=type=cache,target=/root/.cache/go-build \
 
 FROM scratch
 
-COPY --from=build /src/out/* /bin/.
+COPY --from=build /src/out/* /bin/
 ENV PATH /bin
 ENV PORT 8080
 WORKDIR /workspace
